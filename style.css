@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #faf600;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 2rem;
+}
+
+/* global css */
+img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 22rem;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  background-color: #09f3ff;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  /* customize */
+  background-color: #fff;
+  color: skyblue;
+  border: 2px solid rgb(0, 183, 255);
+}
+
+.box {
+  width: 4rem;
+  height: 4rem;
+  border: 7px solid #f9ca24;
+  /* box-shadow: 0px 0px 2px #f9ca24; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.title {
+  color: red;
+}
+
+.x,
+.o {
+  font-size: 3rem;
+  font-weight: 600;
+
+}
+
+.o {
+  color: blue;
+}
+
+.x {
+  color: red;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* .box:first-child,
+.box.box:nth-child(4),
+.box.box:nth-child(7) {
+  border-left: none;
+} */
+.box.box:nth-child(1n) {
+  border-left: none;
+}
+
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+.box:nth-child(6)~.box {
+  border-bottom: none;
+}
+
+.box.box:nth-child(1n) {
+  border-top: none;
+}
+
+.win {
+  animation: winAnimation ease-in-out 1s infinite;
+  border-radius: 5px;
+}
+
+@keyframes winAnimation {
+  0% {
+    background-color: #fff;
+  }
+
+  100% {
+    background-color: Black;
+  }
+}
+
+@media screen and (min-width: 576px) {}
+
+/* Medium devices (tablets) */
+
+@media (min-width: 768px) {}
+
+/* Large devices (desktops) */
+
+@media (min-width: 991px) {}
+
+/* Extra large devices (large desktops) */
+
+@media (min-width: 1200px) {}
